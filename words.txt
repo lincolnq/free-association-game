@@ -431,7 +431,6 @@ Pear
 Pen
 Pencil
 Pendulum
-Penis
 Penny
 Pepper
 Personal
@@ -635,7 +634,6 @@ Tutor
 Television
 Twang
 Twig
-Twitterpated
 Type
 Unemployed
 Upgrade
