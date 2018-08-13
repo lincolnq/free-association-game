@@ -21,15 +21,19 @@ def gen():
     random.shuffle(pairs)
     return ''.join(x[0] for x in pairs), ''.join(x[1] for x in pairs)
 
-template = '''
-<!doctype html>
+template = '''<!doctype html>
 <html>
 <meta name="viewport" content="width=200, initial-scale=1">
+<meta charset="utf-8"/>
 <style>
+body {{ color: #fff; font-size: 20px; }}
 .G {{ background: #8f8; }}
+.G::after {{ content: "✓" }}
 .B {{ background: #444; }}
+.B::after {{ content: "\20E0"; }}
 .W {{ background: #eee; }}
-td {{ width: 30px; height: 30px; border: 1px solid #fff; padding: 0; margin:0; }}
+.B::after {{ content: "\A0"; }}
+td {{ padding: 1em; border: 1px solid #fff; margin:0; text-align: center; }}
 table {{ border: 2px solid #000; border-collapse: collapse; }}
 </style>
 <body>
@@ -43,7 +47,7 @@ table {{ border: 2px solid #000; border-collapse: collapse; }}
 def write(fn, x):
     def mkrow(s):
         """Given 5 chars, render the row"""
-        return ''.join('<td class="{}">&nbsp;</td>'.format(c) for c in s)
+        return ''.join('<td class="{}"></td>'.format(c) for c in s)
 
     def splitrows(s):
         """Given 25 chars, split it into a list of 5-character rows"""
