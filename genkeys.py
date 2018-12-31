@@ -1,3 +1,4 @@
+# coding: utf-8
 """Codenames keys (for Duet) are a pair of 5x5 grids.
 
 Each grid square is either a Bystander (white), Answer (green) or Assassin (black).
